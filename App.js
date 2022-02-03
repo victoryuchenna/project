@@ -33,9 +33,12 @@ async function load() {
         <View style={styles.taskWrapper}>
           <Text style={styles.sectionTitle}>Find ME</Text>
 
-          <View style={styles.list}>
-
-            {/* List*/}
+          <View style={styles.button}>
+            <TouchableOpacity
+              onPress={() => alert('Hello, world!')}
+              style={{ backgroundColor: 'blue' }}>
+              <Text style={{ fontSize: 20, color: '#fff' }}>Pick a photo</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -52,6 +55,7 @@ const styles = StyleSheet.create({
   taskWrapper: {
     paddingTop: 80,
     paddingHorizontal: 20,
+    
 
   },
   sectionTitle: {
