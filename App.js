@@ -36,8 +36,8 @@ async function load() {
           <View style={styles.button}>
             <TouchableOpacity
               onPress={() => alert('Hello, world!')}
-              style={{ backgroundColor: 'blue' }}>
-              <Text style={{ fontSize: 20, color: '#fff' }}>Pick a photo</Text>
+              style={{ backgroundColor: 'red' }}>
+              <Text style={{ fontSize: 20, color: '#fff' }}>ALERT!</Text>
             </TouchableOpacity>
           </View>
         </View>
