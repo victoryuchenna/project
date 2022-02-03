@@ -17,14 +17,27 @@ async function load() {
       setErrorMessage('Access needed')
       return
     }
+    const location = await Location.getCurrentPositionAsync()
+
+    const {latitude, longitude} = Location.coords
+    alert(`Latitude : ${latitude}, Longitude: ${longitude}`)
+
   } catch (errror) {
 
   }
 }
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <StatusBar style="auto" />
+
+        {/* FindMe */}
+        <View style={styles.taskWrapper}>
+          <Text style={styles.sectionTitle}>Find ME</Text>
+
+          <View style={styles.list}>
+
+            {/* List*/}
+          </View>
+        </View>
       </View>
     );
   }
@@ -32,8 +45,22 @@ async function load() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#E8EAED',
+
+  },
+
+  taskWrapper: {
+    paddingTop: 80,
+    paddingHorizontal: 20,
+
+  },
+  sectionTitle: {
+    fontSize: 24,
+    fontWeight: "bold"
+
+  },
+
+  list: {
+
   },
 });
